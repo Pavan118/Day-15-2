@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter a sentence" id="inp1"><br><br>
+        <button id="btn">Display word count</button>
+    </form>
+    <script>
+        var form=document.getElementsByTagName("form")[0]
+        var inp1=document.getElementById("inp1")
+        var btn=document.getElementById("btn")
+        btn.addEventListener("click",function(e){
+            e.preventDefault()
+            var sen=inp1.value.split(" ")
+            count=0
+            for (i in sen){
+                count+=1
+            }
+            console.log(count)
+            document.body.append(count)
+        })
+        // var userSentence=prompt("Enter a sentence: ").split(" ")
+        // count=0
+        // for (i in userSentence){
+        //     count+=1
+        // }
+        // console.log(count)
+    </script>
+</body>
+</html>
